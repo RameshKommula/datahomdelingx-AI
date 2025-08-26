@@ -1,0 +1,12 @@
+{
+  "trio-prod": {
+    "type": "Trino",
+    "host": "trino.dev.de.gcp.rokulabs.net",
+    "port": "443",
+    "username": "dataengineering",
+    "password": "nCIDqkWV78Gbks7l9OBQdnA9WyY=",
+    "catalog": "hive",
+    "schema": "roku",
+    "client_tags": ["budget_areas|BA1002"]
+  }
+}

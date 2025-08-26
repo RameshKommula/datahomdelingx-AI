@@ -1,0 +1,82 @@
+# Data Modeling AI Configuration
+
+# LLM Provider Configuration
+llm_provider: "claude"  # "claude" or "openai"
+
+# Claude Configuration (recommended)
+claude:
+  api_key: "your_claude_api_key_here"
+  model: "claude-3-5-sonnet-20241022"
+  temperature: 0.3
+  max_tokens: 4000
+
+# OpenAI Configuration (alternative)
+openai:
+  api_key: "your_openai_api_key_here"
+  model: "gpt-4"
+  temperature: 0.3
+  max_tokens: 2000
+
+# Data Lake Connections
+data_lakes:
+  hive:
+    host: "localhost"
+    port: 10000
+    username: "your_username"
+    password: "your_password"
+    database: "default"
+    
+  trino:
+    host: "localhost"
+    port: 8080
+    username: "your_username"
+    password: "your_password"
+    catalog: "your_catalog"
+    schema: "default"
+    
+  presto:
+    host: "localhost"
+    port: 8080
+    username: "your_username"
+    catalog: "your_catalog"
+    schema: "default"
+
+# Analysis Configuration
+analysis:
+  max_sample_rows: 10000
+  profiling_timeout: 300  # seconds
+  max_concurrent_tables: 10
+  
+# AI Agent Configuration
+agents:
+  schema_analyzer:
+    enabled: true
+    max_depth: 5
+    
+  data_profiler:
+    enabled: true
+    statistical_analysis: true
+    data_quality_checks: true
+    
+  relationship_detector:
+    enabled: true
+    confidence_threshold: 0.8
+    
+  modeling_advisor:
+    enabled: true
+    include_performance_tips: true
+    include_governance_recommendations: true
+
+# Caching
+cache:
+  enabled: true
+  backend: "redis"
+  host: "localhost"
+  port: 6379
+  ttl_hours: 24
+
+# Logging
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/datamodeling_ai.log"
